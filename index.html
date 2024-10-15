@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PERSONAL WEBSİTE / YAĞIZ ÖZKAYA</title>
+    
+    <link rel="shortcut icon" href="img/icons8-deer-64.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <i class='bx bx-user'></i>
+  </head>
+  <body>
+
+    <header class="header">
+        <a href="#home" class="logo">
+            YAĞIZ ÖZKAYA
+        </a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+          <a href="#home" class="active">Home Page</a>
+          <a href="#education">Education</a>
+          <a href="#Technology">Technology</a>
+          <a href="#Hobby">Hobby</a>
+          <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hello, I am Yağız</h1>
+        <h3 class="text-animation">Who am I? <span></span></h3>
+        <p>
+          Hello, I am Yağız Özkaya. I am a 4th year student of Geomatics Engineering.
+          
+        </p>
+        <div class="social-icon">
+          <a href="https://www.instagram.com/ygz.ozkaya" target="_blank"> 
+              <i class='bx bxl-instagram'></i> 
+          </a> 
+          <a href="https://www.linkedin.com/in/yağız-özkaya-5238a8225/" target="_blank"> 
+              <i class='bx bxl-linkedin-square'></i> 
+          </a> 
+      </div>
+      
+        <div class="btn-group">
+            <a href="https://drive.google.com/file/d/16O5mPHGmNgkje5hxVoBaBhGUGXfhJQVZ/view?usp=sharing" class="btn">CV</a>
+        </div>
+      </div> 
+
+      <div class="home-img">
+        <img src="img/image.png" alt="" width="300" height="400">
+
+      </div>
+    </section>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLayers Map Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
+    <style>
+      .map-section {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .map-section .btn {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .map-section .btn:hover {
+        background-color: #0056b3;
+      }
+
+      .map-section #map {
+        width: 100%;
+        height: 400px;
+        display: none;
+        margin-top: 20px;
+      }
+
+      /* Yeni başlık için stil */
+      .map-section .sub-heading {
+        font-size: 24px; /* Yazı boyutu */
+        color: #FF6347; /* Renk (Domates rengi) */
+        margin-top: 10px; /* Üstten boşluk */
+      }
+    </style>
+</head>
+<body>
+
+<section class="map-section">
+    <h2>My Map Section</h2>
+    <p class="sub-heading">Places I aim to go</p> <!-- Eklenen metin -->
+    <button class="btn" onclick="showMap()">Target Map</button>
+    <div id="map"></div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
+<script>
+    function showMap() {
+        document.getElementById('map').style.display = 'block';
+
+        // OpenLayers haritasını oluştur
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM() // OpenStreetMap katmanı
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([-73.935242, 40.730610]), // New York koordinatları
+                zoom: 2 // Yakınlaştırma seviyesi
+            })
+        });
+
+        // İşaretçileri oluşturma
+        var locations = [
+            { coords: [2.35, 48.85], color: 'red' }, // Paris
+            { coords: [-73.935242, 40.730610], color: 'blue' }, // New York
+            { coords: [10.757933, 59.913868], color: 'green' } // Oslo
+        ];
+
+        locations.forEach(function(location) {
+            var marker = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat(location.coords)), // Koordinatlar
+            });
+
+            // Harita katmanına işaretleyici eklemek için bir vektör katmanı oluşturma
+            var vectorSource = new ol.source.Vector({
+                features: [marker]
+            });
+
+            var markerLayer = new ol.layer.Vector({
+                source: vectorSource,
+                style: new ol.style.Style({
+                    image: new ol.style.Circle({
+                        radius: 15, // Dairenin boyutu
+                        fill: new ol.style.Fill({ color: location.color }), // Dairenin rengi
+                        stroke: new ol.style.Stroke({
+                            color: 'white',
+                            width: 3 // Kenar kalınlığı
+                        })
+                    })
+                })
+            });
+
+            // Haritaya işaretleyici katmanını ekle
+            map.addLayer(markerLayer);
+        });
+    }
+</script>
+
+</body>
+</html>
+
+    
+    
+
+
+    <section class="education" id="education">
+      <h2 class="heading" onclick="toggleEducation()">Education</h2>
+      <div class="education-content" id="educationContent">
+          <div class="education-item">
+              <h3>Hacettepe University</h3>
+              <p>Degree: Bachelor of Science in Geomatics Engineering</p>
+              <p>Year Attended: 2020</p>
+          
+      </div>
+    </section>
+
+
+    <section class="Technology" id="Technology">
+      <h2 class="heading">Technology</h2>
+      <div class="Technology-item">
+          <ul>
+              <li>Python</li>
+              <li>HTML & CSS</li>
+              <li>Agisoft</li>
+              <li>QGIS</li>
+              <li>Netcad</li>
+              <li>MicroStation</li>
+              <li>Unity</li>
+              <li>Blender</li>
+
+
+          </ul>
+      </div>
+  </section>
+  
+
+    <section class="Hobby" id="Hobby">
+      <h2 class="heading">My Hobbies</h2>
+      <div class="Hobby-content">
+          </ul>
+               <li>playing guitar</li>
+               <li>Traveling</li>
+               <li>singing</li>
+               <li>basketball</li>
+
+          </ul>
+      </div>
+    </section> 
+
+    
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact Me</h2>
+      <p>If you have any questions or just want to say hello, feel free to email me!</p>
+      <div class="contact-info">
+          <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ygz.ozkaya.topak@gmail.com" target="_blank">ygz.ozkaya.topak@gmail.com</a></p>
+      </div>
+  </section>
+  
+     
+  
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
