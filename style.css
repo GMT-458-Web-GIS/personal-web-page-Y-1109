@@ -218,7 +218,7 @@ section{
 }
 
 
-/* Genel stil */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
@@ -227,7 +227,7 @@ body {
     line-height: 1.6;
 }
 
-/* Education başlığı için stil */
+
 .education .heading {
     text-align: center;
     font-size: 2.5rem;
@@ -238,7 +238,7 @@ body {
     letter-spacing: 0.1rem;
 }
 
-/* Eğitim öğeleri için stil */
+
 .education-item {
     background-color: #ffffff;
     border-radius: 10px;
@@ -249,13 +249,13 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover efektleri */
+
 .education-item:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Üniversite ismi için stil */
+
 .education-item h3 {
     color: #3498db;
     font-size: 1.8rem;
@@ -263,14 +263,14 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Eğitim detayları için stil */
+
 .education-item p {
     color: #7f8c8d;
     font-size: 1rem;
     margin: 0.3rem 0;
 }
 
-/* Responsive tasarım */
+
 @media (max-width: 600px) {
     .education-item {
         padding: 1rem;
@@ -391,12 +391,12 @@ body {
     background-color: #f9f9f9;
     padding: 40px;
     margin: 40px auto;
-    border-radius: 15px; /* Increased rounding for a softer look */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
     max-width: 600px;
     text-align: center;
-    position: relative; /* Allows for absolutely positioned elements inside */
-    overflow: hidden; /* Prevents overflow of pseudo-elements */
+    position: relative; 
+    overflow: hidden; 
 }
 
 .contact:before {
@@ -406,43 +406,43 @@ body {
     left: 50%;
     width: 150%;
     height: 100%;
-    background: linear-gradient(135deg, #007BFF 0%, #00C6FF 100%); /* Gradient background */
-    z-index: -1; /* Places it behind the content */
-    transform: translateX(-25%); /* Adjusts position for centering */
-    opacity: 0.3; /* Slightly transparent */
-    border-radius: 15px; /* Matches the section's border radius */
+    background: linear-gradient(135deg, #007BFF 0%, #00C6FF 100%); 
+    z-index: -1; 
+    transform: translateX(-25%); 
+    opacity: 0.3; 
+    border-radius: 15px; 
 }
 
 .contact .heading {
-    font-size: 32px; /* Increased heading size */
+    font-size: 32px; 
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
-    text-transform: uppercase; /* Makes the heading all caps */
-    letter-spacing: 1px; /* Adds space between letters */
-    border-bottom: 2px solid #007BFF; /* Bottom border for emphasis */
-    padding-bottom: 10px; /* Padding for spacing from text */
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    border-bottom: 2px solid #007BFF; 
+    padding-bottom: 10px; 
 }
 
 .contact-info p {
-    font-size: 20px; /* Increased font size */
+    font-size: 20px; 
     color: #555;
-    line-height: 1.6; /* Better line spacing for readability */
+    line-height: 1.6; 
 }
 
 .contact-info a {
     color: #007BFF; 
     text-decoration: none; 
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    transition: color 0.3s, transform 0.3s; 
 }
 
 .contact-info a:hover {
     color: #0056b3; 
-    transform: scale(1.05); /* Slightly enlarges the link on hover */
-    font-weight: bold; /* Makes the text bold on hover */
+    transform: scale(1.05); 
+    font-weight: bold; 
 }
 
 .contact-info a:active {
-    color: #003f7f; /* Even darker shade when clicked */
+    color: #003f7f; 
 }
 
