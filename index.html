@@ -95,11 +95,11 @@
         margin-top: 20px;
       }
 
-      /* Yeni başlık için stil */
+      
       .map-section .sub-heading {
-        font-size: 24px; /* Yazı boyutu */
-        color: #FF6347; /* Renk (Domates rengi) */
-        margin-top: 10px; /* Üstten boşluk */
+        font-size: 24px; 
+        color: #FF6347; 
+        margin-top: 10px; 
       }
     </style>
 </head>
@@ -107,7 +107,7 @@
 
 <section class="map-section">
     <h2>My Map Section</h2>
-    <p class="sub-heading">Places I aim to go</p> <!-- Eklenen metin -->
+    <p class="sub-heading">Places I aim to go</p> 
     <button class="btn" onclick="showMap()">Target Map</button>
     <div id="map"></div>
 </section>
@@ -117,21 +117,21 @@
     function showMap() {
         document.getElementById('map').style.display = 'block';
 
-        // OpenLayers haritasını oluştur
+        
         var map = new ol.Map({
             target: 'map',
             layers: [
                 new ol.layer.Tile({
-                    source: new ol.source.OSM() // OpenStreetMap katmanı
+                    source: new ol.source.OSM() 
                 })
             ],
             view: new ol.View({
-                center: ol.proj.fromLonLat([-73.935242, 40.730610]), // New York koordinatları
-                zoom: 2 // Yakınlaştırma seviyesi
+                center: ol.proj.fromLonLat([-73.935242, 40.730610]), 
+                zoom: 2 
             })
         });
 
-        // İşaretçileri oluşturma
+        
         var locations = [
             { coords: [2.35, 48.85], color: 'red' }, // Paris
             { coords: [-73.935242, 40.730610], color: 'blue' }, // New York
@@ -140,10 +140,10 @@
 
         locations.forEach(function(location) {
             var marker = new ol.Feature({
-                geometry: new ol.geom.Point(ol.proj.fromLonLat(location.coords)), // Koordinatlar
+                geometry: new ol.geom.Point(ol.proj.fromLonLat(location.coords)), 
             });
 
-            // Harita katmanına işaretleyici eklemek için bir vektör katmanı oluşturma
+            
             var vectorSource = new ol.source.Vector({
                 features: [marker]
             });
@@ -152,17 +152,17 @@
                 source: vectorSource,
                 style: new ol.style.Style({
                     image: new ol.style.Circle({
-                        radius: 15, // Dairenin boyutu
-                        fill: new ol.style.Fill({ color: location.color }), // Dairenin rengi
+                        radius: 15, 
+                        fill: new ol.style.Fill({ color: location.color }), 
                         stroke: new ol.style.Stroke({
                             color: 'white',
-                            width: 3 // Kenar kalınlığı
+                            width: 3 
                         })
                     })
                 })
             });
 
-            // Haritaya işaretleyici katmanını ekle
+            
             map.addLayer(markerLayer);
         });
     }
